@@ -1,0 +1,431 @@
+---
+import '../styles/global.css'
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Ocular — SOC Intelligence Platform</title>
+  <meta name="description" content="The intelligence platform built for SOC analysts. Triage IOCs, hunt threats, generate KQL — without switching tabs." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ocular — SOC Intelligence Platform" />
+  <meta property="og:description" content="Triage faster. Hunt smarter. Built for analysts, by analysts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ocular-soc.com" />
+</head>
+<body
+  style="background-color:#06070f; background-image:radial-gradient(circle, rgba(20,184,166,0.055) 1px, transparent 1px); background-size:28px 28px;"
+>
+
+  <!-- ── NAV ── -->
+  <nav class="fixed top-0 inset-x-0 z-50 border-b border-[#1a2744]/80 backdrop-blur-md"
+       style="background:rgba(6,7,15,0.85)">
+    <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-sm flex items-center justify-center border border-teal-500/25"
+             style="background:#0b1f20">
+          <!-- Eye icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.5" class="text-teal-300" style="color:#5eead4">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <span style="color:#fff; font-weight:700; font-size:14px; letter-spacing:0.18em">OCULAR</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#features" style="color:#94a3b8; font-size:13px"
+           class="hover:text-white transition-colors hidden sm:block">Features</a>
+        <a href="#video" style="color:#94a3b8; font-size:13px"
+           class="hover:text-white transition-colors hidden sm:block">Demo</a>
+        <a href="https://demo.ocular-soc.com" target="_blank"
+           style="color:#94a3b8; font-size:13px"
+           class="hover:text-white transition-colors hidden sm:block">Try Demo</a>
+        <a href="#contact"
+           style="background:#14b8a6; color:#fff; font-size:12px; font-weight:600; letter-spacing:0.1em; padding:7px 16px; border-radius:2px"
+           class="hover:bg-teal-400 transition-colors uppercase">Request Access</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="pt-36 pb-24 px-6 text-center relative">
+    <!-- Glow backdrop -->
+    <div class="absolute inset-x-0 top-0 h-96 pointer-events-none"
+         style="background:radial-gradient(ellipse 70% 40% at 50% 0%, rgba(20,184,166,0.12) 0%, transparent 100%)"></div>
+
+    <div class="relative max-w-4xl mx-auto space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border"
+           style="background:rgba(20,184,166,0.08); border-color:rgba(20,184,166,0.2)">
+        <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
+        <span style="color:#5eead4; font-size:11px; font-weight:600; letter-spacing:0.12em">BUILT FOR SOC ANALYSTS</span>
+      </div>
+
+      <h1 style="font-size:clamp(2.2rem,5vw,3.8rem); font-weight:800; line-height:1.1; letter-spacing:-0.02em; color:#fff">
+        Stop switching tabs.<br/>
+        <span style="background:linear-gradient(135deg,#5eead4,#38bdf8); -webkit-background-clip:text; -webkit-text-fill-color:transparent">Start hunting threats.</span>
+      </h1>
+
+      <p style="font-size:clamp(1rem,2vw,1.2rem); color:#94a3b8; max-width:600px; margin:0 auto; line-height:1.7">
+        Ocular gives SOC analysts a single platform for IOC triage, threat hunting, and KQL generation —
+        without leaving the browser.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+        <a href="#contact"
+           style="background:#14b8a6; color:#fff; font-size:13px; font-weight:700; padding:13px 28px; border-radius:2px; letter-spacing:0.1em"
+           class="hover:bg-teal-400 transition-colors uppercase text-center">
+          Request Demo
+        </a>
+        <a href="https://demo.ocular-soc.com" target="_blank"
+           style="background:transparent; color:#94a3b8; font-size:13px; font-weight:600; padding:13px 28px; border-radius:2px; border:1px solid #1a2744; letter-spacing:0.08em"
+           class="hover:border-slate-500 hover:text-white transition-colors uppercase text-center">
+          Try Live Demo →
+        </a>
+      </div>
+    </div>
+
+    <!-- App screenshot mockup -->
+    <div class="relative max-w-5xl mx-auto mt-16">
+      <div class="rounded-sm border overflow-hidden shadow-2xl"
+           style="border-color:#1a2744; box-shadow:0 0 80px rgba(20,184,166,0.08), 0 32px 64px rgba(0,0,0,0.6)">
+        <!-- Browser chrome -->
+        <div class="flex items-center gap-2 px-4 h-9 border-b"
+             style="background:#080914; border-color:#1a2744">
+          <div class="flex gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#1e293b"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#1e293b"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#1e293b"></span>
+          </div>
+          <div class="flex-1 mx-4">
+            <div class="max-w-xs mx-auto h-5 rounded-sm flex items-center px-3"
+                 style="background:#06070f; border:1px solid #1a2744">
+              <span style="color:#475569; font-size:11px; font-family:'JetBrains Mono',monospace">app.ocular-soc.com/scope</span>
+            </div>
+          </div>
+        </div>
+        <!-- Screenshot placeholder — replace with actual screenshot -->
+        <div class="w-full flex items-center justify-center"
+             style="background:linear-gradient(160deg,#0a0f1e 0%,#060b14 50%,#080e1a 100%); aspect-ratio:16/9">
+          <div class="text-center space-y-4 opacity-40">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1"
+                 class="mx-auto">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <p style="color:#5eead4; font-size:12px; font-family:'JetBrains Mono',monospace; letter-spacing:0.1em">
+              SCREENSHOT PLACEHOLDER
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Glow under screenshot -->
+      <div class="absolute inset-x-0 -bottom-8 h-16 pointer-events-none"
+           style="background:radial-gradient(ellipse 60% 100% at 50% 100%, rgba(20,184,166,0.07) 0%, transparent 100%)"></div>
+    </div>
+  </section>
+
+  <!-- ── SOCIAL PROOF BAR ── -->
+  <section class="py-10 border-y" style="border-color:#1a2744">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+        {[
+          { num: '18+', label: 'Threat Hunt Modules' },
+          { num: '230+', label: 'KQL Queries' },
+          { num: '100%', label: 'Microsoft Native SSO' },
+          { num: '0', label: 'Shared Infrastructure' },
+        ].map(({ num, label }) => (
+          <div>
+            <div style="font-size:1.75rem; font-weight:800; color:#fff; font-variant-numeric:tabular-nums">{num}</div>
+            <div style="font-size:11px; color:#64748b; letter-spacing:0.08em; margin-top:4px">{label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROBLEM ── -->
+  <section class="py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center space-y-5">
+      <span style="color:#5eead4; font-size:11px; font-weight:600; letter-spacing:0.15em">THE PROBLEM</span>
+      <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:700; color:#fff; line-height:1.2">
+        A typical SOC analyst juggles 12+ browser tabs per investigation
+      </h2>
+      <p style="color:#64748b; font-size:1rem; line-height:1.8">
+        VirusTotal. AbuseIPDB. Shodan. NVD. MITRE ATT&CK. Sentinel. Each lookup is a context switch.
+        Each context switch is lost momentum. When a real threat is moving fast, your tools shouldn't slow you down.
+      </p>
+    </div>
+
+    <!-- Pain points grid -->
+    <div class="max-w-4xl mx-auto mt-14 grid sm:grid-cols-3 gap-4">
+      {[
+        { icon: '⏱', title: 'Manual IOC Triage', body: 'Copy-paste across 5 tools to get a verdict on a single IP. Multiply that by 20 alerts per shift.' },
+        { icon: '🔍', title: 'No Unified Context', body: 'Geolocation in one tab, reputation in another, open ports in a third. No analyst should have to stitch that together manually.' },
+        { icon: '📝', title: 'KQL from Scratch', body: 'Writing Sentinel queries for every hunt wastes hours. Analysts shouldn\'t be syntax engineers.' },
+      ].map(({ icon, title, body }) => (
+        <div class="rounded-sm p-5 border" style="background:#0c1220; border-color:#1a2744">
+          <div style="font-size:1.5rem; margin-bottom:10px">{icon}</div>
+          <h3 style="color:#e2e8f0; font-size:14px; font-weight:600; margin-bottom:6px">{title}</h3>
+          <p style="color:#64748b; font-size:13px; line-height:1.7">{body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section id="features" class="py-24 px-6 border-t" style="border-color:#1a2744">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16 space-y-3">
+        <span style="color:#5eead4; font-size:11px; font-weight:600; letter-spacing:0.15em">WHAT OCULAR DOES</span>
+        <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:700; color:#fff">
+          Every tool an analyst needs. One platform.
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            tag: 'IOC', tagColor: '#f87171', tagBg: 'rgba(239,68,68,0.08)', tagBorder: 'rgba(239,68,68,0.2)',
+            title: 'Instant IOC Intelligence',
+            body: 'IP, domain, file hash, URL — paste any indicator and get reputation, geolocation, ASN, open ports, malware families, and C2 signals in seconds. Batch-check dozens at once.',
+            items: ['IP · Domain · Hash · URL · Email', 'Shodan InternetDB · BGP/ASN · SSL Certs', 'Batch Check — 50 IOCs in parallel', 'Self-learning IOC memory across sessions'],
+          },
+          {
+            tag: 'HUNT', tagColor: '#a78bfa', tagBg: 'rgba(139,92,246,0.08)', tagBorder: 'rgba(139,92,246,0.2)',
+            title: 'KQL Threat Hunt Generator',
+            body: '230+ validated Microsoft Sentinel queries across 44 huntbooks. Add your IOC context, get ready-to-paste KQL with substitution fields pre-filled. No syntax errors, no guesswork.',
+            items: ['44 Huntbooks — full MITRE ATT&CK coverage', '230+ validated Sentinel queries', 'Auto-substitution for IP, Domain, Hash, User', 'One-click copy — paste directly into Sentinel'],
+          },
+          {
+            tag: 'UTIL', tagColor: '#94a3b8', tagBg: 'rgba(148,163,184,0.08)', tagBorder: 'rgba(148,163,184,0.2)',
+            title: 'Analyst Utilities',
+            body: 'The small tools that save 10 minutes each — email header parsing, LOtL binary analysis, CVE lookup with EPSS scoring, decoder for obfuscated payloads, and more.',
+            items: ['Email Header Analyzer (SPF/DKIM/DMARC)', 'LOtL Analyzer — certutil, mshta, rundll32...', 'CVE Search + CISA KEV + EPSS Score', 'Base64 · Hex · JWT · XOR Decoder'],
+          },
+        ].map(({ tag, tagColor, tagBg, tagBorder, title, body, items }) => (
+          <div class="rounded-sm border p-6 flex flex-col sm:flex-row gap-6"
+               style={`background:#0c1220; border-color:#1a2744`}>
+            <div class="flex-1 space-y-3">
+              <span class="inline-block px-2 py-0.5 rounded-sm text-xs font-bold uppercase tracking-wider"
+                    style={`color:${tagColor}; background:${tagBg}; border:1px solid ${tagBorder}`}>
+                {tag}
+              </span>
+              <h3 style="color:#fff; font-size:1.1rem; font-weight:700">{title}</h3>
+              <p style="color:#64748b; font-size:13px; line-height:1.75">{body}</p>
+            </div>
+            <ul class="sm:w-56 space-y-2 shrink-0">
+              {items.map(item => (
+                <li class="flex items-start gap-2" style="font-size:12px; color:#94a3b8">
+                  <span style={`color:${tagColor}; margin-top:3px`}>✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VIDEO ── -->
+  <section id="video" class="py-24 px-6 border-t" style="border-color:#1a2744">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12 space-y-3">
+        <span style="color:#5eead4; font-size:11px; font-weight:600; letter-spacing:0.15em">SEE IT IN ACTION</span>
+        <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:700; color:#fff">
+          Watch a full investigation walkthrough
+        </h2>
+        <p style="color:#64748b; font-size:14px">
+          From a suspicious IP alert to a complete KQL hunt — under 4 minutes.
+        </p>
+      </div>
+
+      <!-- Video embed container — swap src for real video URL -->
+      <div class="rounded-sm border overflow-hidden relative"
+           style="border-color:#1a2744; box-shadow:0 0 60px rgba(20,184,166,0.06), 0 24px 48px rgba(0,0,0,0.5); aspect-ratio:16/9; background:#080914">
+
+        <!-- VIDEO PLACEHOLDER — replace with actual embed -->
+        <!-- Option A: YouTube embed:
+             <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&rel=0&color=white"
+                     class="absolute inset-0 w-full h-full" frameborder="0" allowfullscreen></iframe>
+        -->
+        <!-- Option B: Self-hosted mp4:
+             <video src="/demo.mp4" class="absolute inset-0 w-full h-full" controls poster="/demo-poster.jpg"></video>
+        -->
+
+        <!-- Placeholder UI until video is recorded -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-4">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center border-2 cursor-pointer group transition-all"
+               style="border-color:rgba(20,184,166,0.4); background:rgba(20,184,166,0.08)"
+               onclick="alert('Demo video coming soon — or try the live demo at demo.ocular-soc.com')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#5eead4" class="ml-1">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          <div class="text-center space-y-1">
+            <p style="color:#5eead4; font-size:13px; font-weight:600">Demo Video</p>
+            <p style="color:#475569; font-size:12px">Recording in progress</p>
+          </div>
+          <a href="https://demo.ocular-soc.com" target="_blank"
+             style="background:rgba(20,184,166,0.1); border:1px solid rgba(20,184,166,0.25); color:#5eead4; font-size:12px; font-weight:600; padding:8px 20px; border-radius:2px; letter-spacing:0.08em"
+             class="hover:bg-teal-500/20 transition-colors uppercase mt-2">
+            Try Live Demo Instead →
+          </a>
+        </div>
+      </div>
+
+      <p class="text-center mt-4" style="color:#334155; font-size:12px">
+        Prefer to explore yourself?
+        <a href="https://demo.ocular-soc.com" target="_blank"
+           style="color:#5eead4" class="hover:underline">Open the interactive demo →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── TRUST ── -->
+  <section class="py-24 px-6 border-t" style="border-color:#1a2744">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14 space-y-3">
+        <span style="color:#5eead4; font-size:11px; font-weight:600; letter-spacing:0.15em">BUILT FOR ENTERPRISE</span>
+        <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:700; color:#fff">
+          Security software that actually respects security
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          {
+            icon: '🔐',
+            title: 'Microsoft SSO — Zero Config',
+            body: 'Every customer deployment connects to their own Entra ID tenant. Analysts log in with their existing M365 account. No additional credentials, no password management.',
+          },
+          {
+            icon: '🏗',
+            title: 'Dedicated Silo per Customer',
+            body: 'No shared infrastructure. Your data never touches another customer\'s environment. Each deployment is an isolated Azure Static Web App with its own API backend.',
+          },
+          {
+            icon: '🔒',
+            title: 'Privacy by Design',
+            body: 'Analysis results live in browser sessionStorage only — never persisted to a database, never logged on a server. A page refresh is a clean slate. GDPR-compliant by architecture.',
+          },
+          {
+            icon: '🛡',
+            title: 'Bring Your Own API Keys',
+            body: 'Your threat intelligence API keys stay in your environment. Ocular never holds your VirusTotal or AbuseIPDB credentials — they live in your private n8n instance.',
+          },
+          {
+            icon: '☁',
+            title: 'Azure Native',
+            body: 'Hosted on Azure Static Web Apps. Same cloud your Microsoft Sentinel runs on. No foreign infrastructure to approve through your security review board.',
+          },
+          {
+            icon: '📋',
+            title: 'AVV & GDPR Ready',
+            body: 'Data Processing Agreement (DPA) available on request. No analytics tracking, no third-party cookies, no telemetry. What happens in your SOC stays in your SOC.',
+          },
+        ].map(({ icon, title, body }) => (
+          <div class="rounded-sm p-5 border" style="background:#0c1220; border-color:#1a2744">
+            <div style="font-size:1.4rem; margin-bottom:10px">{icon}</div>
+            <h3 style="color:#e2e8f0; font-size:14px; font-weight:600; margin-bottom:6px">{title}</h3>
+            <p style="color:#64748b; font-size:12px; line-height:1.7">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA / CONTACT ── -->
+  <section id="contact" class="py-28 px-6 border-t relative overflow-hidden" style="border-color:#1a2744">
+    <div class="absolute inset-0 pointer-events-none"
+         style="background:radial-gradient(ellipse 60% 60% at 50% 50%, rgba(20,184,166,0.07) 0%, transparent 70%)"></div>
+    <div class="relative max-w-xl mx-auto text-center space-y-8">
+      <div class="space-y-4">
+        <h2 style="font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#fff; line-height:1.15">
+          Ready to see it live?
+        </h2>
+        <p style="color:#64748b; font-size:15px; line-height:1.7">
+          Book a 30-minute demo. We'll walk through a real investigation flow with your team's actual use cases.
+          No sales pitch — just the tool.
+        </p>
+      </div>
+
+      <form
+        action="mailto:demo@ocular-soc.com"
+        method="get"
+        enctype="text/plain"
+        class="space-y-3"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+          style="width:100%; background:#06070f; border:1px solid #1a2744; border-radius:2px; padding:12px 16px; font-size:14px; color:#e2e8f0; outline:none"
+          onfocus="this.style.borderColor='rgba(20,184,166,0.5)'"
+          onblur="this.style.borderColor='#1a2744'"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Work email"
+          required
+          style="width:100%; background:#06070f; border:1px solid #1a2744; border-radius:2px; padding:12px 16px; font-size:14px; color:#e2e8f0; outline:none"
+          onfocus="this.style.borderColor='rgba(20,184,166,0.5)'"
+          onblur="this.style.borderColor='#1a2744'"
+        />
+        <input
+          type="text"
+          name="company"
+          placeholder="Company / SOC name"
+          style="width:100%; background:#06070f; border:1px solid #1a2744; border-radius:2px; padding:12px 16px; font-size:14px; color:#e2e8f0; outline:none"
+          onfocus="this.style.borderColor='rgba(20,184,166,0.5)'"
+          onblur="this.style.borderColor='#1a2744'"
+        />
+        <button
+          type="submit"
+          style="width:100%; background:#14b8a6; color:#fff; font-size:13px; font-weight:700; letter-spacing:0.1em; padding:14px; border-radius:2px; border:none; cursor:pointer"
+          onmouseover="this.style.background='#0d9488'"
+          onmouseout="this.style.background='#14b8a6'"
+        >
+          REQUEST DEMO
+        </button>
+      </form>
+
+      <p style="color:#334155; font-size:12px">
+        Or try the interactive demo right now →
+        <a href="https://demo.ocular-soc.com" target="_blank" style="color:#5eead4" class="hover:underline">demo.ocular-soc.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t py-10 px-6" style="border-color:#1a2744">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm flex items-center justify-center border border-teal-500/20"
+             style="background:#0b1f20">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.5">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <span style="color:#94a3b8; font-size:13px">Ocular SOC Intelligence Platform</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://demo.ocular-soc.com" target="_blank"
+           style="color:#475569; font-size:12px" class="hover:text-slate-300 transition-colors">Demo</a>
+        <a href="mailto:demo@ocular-soc.com"
+           style="color:#475569; font-size:12px" class="hover:text-slate-300 transition-colors">Contact</a>
+        <span style="color:#1e293b; font-size:12px">© 2026 Ocular</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
