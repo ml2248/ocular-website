@@ -89,10 +89,11 @@ import '../styles/global.css'
     <!-- Headline -->
     <h1 style="font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;line-height:1.05;
                letter-spacing:-0.03em;color:#fff;margin-bottom:24px;">
-      <span data-de="Schluss mit Tab-Chaos." data-en="Stop switching tabs.">Schluss mit Tab-Chaos.</span><br/>
+      Stop switching tabs.<br/>
       <span style="background:linear-gradient(135deg,#5eead4 0%,#38bdf8 50%,#818cf8 100%);
-                   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"
-            data-de="Start mit echtem Hunting." data-en="Start hunting threats.">Start mit echtem Hunting.</span>
+                   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+        Start hunting threats.
+      </span>
     </h1>
 
     <!-- Sub -->
@@ -177,14 +178,14 @@ import '../styles/global.css'
                 background:rgba(12,18,32,0.4);">
   <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;">
     <div>
-      <div style="font-size:2.2rem;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;line-height:1;">18+</div>
+      <div style="font-size:2.2rem;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;line-height:1;">44</div>
       <div style="font-size:11px;color:#334155;letter-spacing:0.1em;margin-top:6px;"
-           data-de="THREAT-HUNT-MODULE" data-en="THREAT HUNT MODULES">THREAT-HUNT-MODULE</div>
+           data-de="HUNTBOOKS" data-en="HUNTBOOKS">HUNTBOOKS</div>
     </div>
     <div>
       <div style="font-size:2.2rem;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;line-height:1;">230+</div>
       <div style="font-size:11px;color:#334155;letter-spacing:0.1em;margin-top:6px;"
-           data-de="VALIDIERTE KQL-QUERIES" data-en="VALIDATED KQL QUERIES">VALIDIERTE KQL-QUERIES</div>
+           data-de="KQL-QUERIES" data-en="KQL QUERIES">KQL-QUERIES</div>
     </div>
     <div>
       <div style="font-size:2.2rem;font-weight:900;
@@ -207,14 +208,14 @@ import '../styles/global.css'
   <div style="max-width:720px;margin:0 auto;text-align:center;">
     <div class="section-label" data-de="DAS PROBLEM" data-en="THE PROBLEM">DAS PROBLEM</div>
     <h2 class="section-heading"
-        data-de="Ein SOC-Analyst jongliert pro Incident mit 12+ Browser-Tabs"
-        data-en="A typical SOC analyst juggles 12+ browser tabs per investigation">
-      Ein SOC-Analyst jongliert pro Incident mit 12+ Browser-Tabs
+        data-de="SOC-Analysten arbeiten täglich mit zu vielen Browser-Tabs"
+        data-en="SOC analysts work across too many browser tabs every day">
+      SOC-Analysten arbeiten täglich mit zu vielen Browser-Tabs
     </h2>
     <p style="color:#475569;font-size:15px;line-height:1.85;margin-top:16px;"
-       data-de="VirusTotal. AbuseIPDB. Shodan. NVD. MITRE ATT&amp;CK. Microsoft Sentinel. Jeder Lookup ist ein Kontextwechsel. Jeder Kontextwechsel kostet Momentum. Wenn eine echte Bedrohung sich schnell bewegt, dürfen die Tools nicht bremsen."
-       data-en="VirusTotal. AbuseIPDB. Shodan. NVD. MITRE ATT&amp;CK. Sentinel. Every lookup is a context switch. Every context switch kills momentum. When a real threat is moving fast, your tools shouldn't slow you down.">
-      VirusTotal. AbuseIPDB. Shodan. NVD. MITRE ATT&amp;CK. Microsoft Sentinel. Jeder Lookup ist ein Kontextwechsel. Jeder Kontextwechsel kostet Momentum. Wenn eine echte Bedrohung sich schnell bewegt, dürfen die Tools nicht bremsen.
+       data-de="Threat Intelligence hier, Reputation da, Defender-Logs dort. Jeder Lookup ist ein Kontextwechsel. Jeder Kontextwechsel kostet Momentum. Wenn eine echte Bedrohung sich schnell bewegt, dürfen die Tools nicht bremsen."
+       data-en="Threat intelligence here, reputation there, Defender logs elsewhere. Every lookup is a context switch. Every context switch kills momentum. When a real threat is moving fast, your tools shouldn't slow you down.">
+      Threat Intelligence hier, Reputation da, Defender-Logs dort. Jeder Lookup ist ein Kontextwechsel. Jeder Kontextwechsel kostet Momentum. Wenn eine echte Bedrohung sich schnell bewegt, dürfen die Tools nicht bremsen.
     </p>
   </div>
 
@@ -240,11 +241,11 @@ import '../styles/global.css'
     </div>
     <div class="pain-card">
       <div class="pain-icon">📝</div>
-      <h3 class="pain-title" data-de="KQL von Grund auf" data-en="KQL from Scratch">KQL von Grund auf</h3>
+      <h3 class="pain-title" data-de="KQL-Queries von Null" data-en="KQL Queries from Scratch">KQL-Queries von Null</h3>
       <p class="pain-body"
-         data-de="Sentinel-Queries für jeden Hunt neu schreiben kostet Stunden. Analysten sollten keine Syntax-Engineers sein."
-         data-en="Writing Sentinel queries for every hunt wastes hours. Analysts shouldn't be syntax engineers.">
-        Sentinel-Queries für jeden Hunt neu schreiben kostet Stunden. Analysten sollten keine Syntax-Engineers sein.
+         data-de="Kusto Query Language für jeden Hunt neu schreiben kostet Stunden — ob in Microsoft Sentinel oder Defender XDR. Analysten sollten keine Syntax-Engineers sein."
+         data-en="Writing Kusto Query Language for every hunt wastes hours — whether in Microsoft Sentinel or Defender XDR. Analysts shouldn't be syntax engineers.">
+        Kusto Query Language für jeden Hunt neu schreiben kostet Stunden — ob in Microsoft Sentinel oder Defender XDR. Analysten sollten keine Syntax-Engineers sein.
       </p>
     </div>
   </div>
@@ -278,16 +279,16 @@ import '../styles/global.css'
             </h3>
           </div>
           <p class="feature-body"
-             data-de="IP, Domain, Datei-Hash, URL — einen Indikator einfügen und in Sekunden Reputation, Geolokation, ASN, offene Ports, Malware-Familien und C2-Signale erhalten. Batch-Check für Dutzende gleichzeitig."
-             data-en="IP, domain, file hash, URL — paste any indicator and get reputation, geolocation, ASN, open ports, malware families, and C2 signals in seconds. Batch-check dozens at once.">
-            IP, Domain, Datei-Hash, URL — einen Indikator einfügen und in Sekunden Reputation, Geolokation, ASN, offene Ports, Malware-Familien und C2-Signale erhalten. Batch-Check für Dutzende gleichzeitig.
+             data-de="IP, Domain, Datei-Hash, URL — einen Indikator einfügen und in Sekunden Reputation, Geolokation, ASN, offene Ports, Malware-Familien und C2-Signale erhalten. Ocular merkt sich jeden geprüften IOC — und erkennt Wiederkehrer automatisch."
+             data-en="IP, domain, file hash, URL — paste any indicator and get reputation, geolocation, ASN, open ports, malware families, and C2 signals in seconds. Ocular remembers every checked IOC and automatically flags repeat offenders.">
+            IP, Domain, Datei-Hash, URL — einen Indikator einfügen und in Sekunden Reputation, Geolokation, ASN, offene Ports, Malware-Familien und C2-Signale erhalten. Ocular merkt sich jeden geprüften IOC — und erkennt Wiederkehrer automatisch.
           </p>
         </div>
         <ul class="feature-list">
           <li class="feature-item" data-de="IP · Domain · Hash · URL · E-Mail" data-en="IP · Domain · Hash · URL · Email">IP · Domain · Hash · URL · E-Mail</li>
           <li class="feature-item" data-de="Shodan · BGP/ASN · SSL-Zertifikate" data-en="Shodan · BGP/ASN · SSL Certs">Shodan · BGP/ASN · SSL-Zertifikate</li>
-          <li class="feature-item" data-de="Batch-Check — 50 IOCs parallel" data-en="Batch Check — 50 IOCs in parallel">Batch-Check — 50 IOCs parallel</li>
-          <li class="feature-item" data-de="IOC Memory cross-session" data-en="IOC memory across sessions">IOC Memory cross-session</li>
+          <li class="feature-item" data-de="Batch-Check — bis zu 50 IOCs parallel" data-en="Batch Check — up to 50 IOCs in parallel">Batch-Check — bis zu 50 IOCs parallel</li>
+          <li class="feature-item" data-de="Bekannte IOCs werden session-übergreifend erkannt" data-en="Known IOCs flagged automatically across sessions">Bekannte IOCs werden session-übergreifend erkannt</li>
         </ul>
       </div>
 
@@ -303,16 +304,16 @@ import '../styles/global.css'
             </h3>
           </div>
           <p class="feature-body"
-             data-de="230+ validierte Microsoft Sentinel Queries in 44 Huntbooks. IOC-Kontext hinzufügen, fertige KQL mit vorausgefüllten Substitutionen erhalten. Keine Syntaxfehler, kein Raten."
-             data-en="230+ validated Microsoft Sentinel queries across 44 huntbooks. Add your IOC context, get ready-to-paste KQL with substitution fields pre-filled. No syntax errors, no guesswork.">
-            230+ validierte Microsoft Sentinel Queries in 44 Huntbooks. IOC-Kontext hinzufügen, fertige KQL mit vorausgefüllten Substitutionen erhalten. Keine Syntaxfehler, kein Raten.
+             data-de="230+ KQL-Queries (Kusto Query Language) in 44 Huntbooks — direkt einsetzbar in Microsoft Sentinel und Defender XDR. IOC-Kontext hinzufügen, fertige Query mit vorausgefüllten Werten erhalten. Kein Syntaxfehler, kein Raten."
+             data-en="230+ KQL queries (Kusto Query Language) across 44 huntbooks — ready to use in Microsoft Sentinel and Defender XDR. Add your IOC context, get a ready-to-paste query with pre-filled values. No syntax errors, no guesswork.">
+            230+ KQL-Queries (Kusto Query Language) in 44 Huntbooks — direkt einsetzbar in Microsoft Sentinel und Defender XDR. IOC-Kontext hinzufügen, fertige Query mit vorausgefüllten Werten erhalten. Kein Syntaxfehler, kein Raten.
           </p>
         </div>
         <ul class="feature-list">
           <li class="feature-item" data-de="44 Huntbooks — vollständiges MITRE ATT&amp;CK" data-en="44 Huntbooks — full MITRE ATT&amp;CK">44 Huntbooks — vollständiges MITRE ATT&amp;CK</li>
-          <li class="feature-item" data-de="230+ validierte Sentinel-Queries" data-en="230+ validated Sentinel queries">230+ validierte Sentinel-Queries</li>
+          <li class="feature-item" data-de="230+ KQL-Queries (Kusto Query Language)" data-en="230+ KQL queries (Kusto Query Language)">230+ KQL-Queries (Kusto Query Language)</li>
           <li class="feature-item" data-de="Auto-Substitution für IP, Domain, Hash, User" data-en="Auto-substitution for IP, Domain, Hash, User">Auto-Substitution für IP, Domain, Hash, User</li>
-          <li class="feature-item" data-de="Direkt in Sentinel einfügen" data-en="One-click copy into Sentinel">Direkt in Sentinel einfügen</li>
+          <li class="feature-item" data-de="Sentinel · Defender XDR — sofort einsetzbar" data-en="Sentinel · Defender XDR — paste and run">Sentinel · Defender XDR — sofort einsetzbar</li>
         </ul>
       </div>
 
@@ -357,9 +358,9 @@ import '../styles/global.css'
         Von IOC zu Sentinel-Query in Sekunden
       </h2>
       <p style="color:#475569;font-size:14px;line-height:1.8;"
-         data-de="Indikator einfügen → Huntbook wählen → fertige Query kopieren. Ocular füllt alle Platzhalter automatisch mit deinem IOC-Kontext."
-         data-en="Paste an indicator → select a huntbook → copy the ready query. Ocular auto-fills all substitutions from your IOC context.">
-        Indikator einfügen → Huntbook wählen → fertige Query kopieren. Ocular füllt alle Platzhalter automatisch mit deinem IOC-Kontext.
+         data-de="Indikator einfügen → Huntbook wählen → fertige KQL kopieren. Ocular füllt alle Platzhalter automatisch mit deinem IOC-Kontext — ready für Microsoft Sentinel oder Defender XDR Advanced Hunting."
+         data-en="Paste an indicator → select a huntbook → copy the ready KQL. Ocular auto-fills all substitutions from your IOC context — ready for Microsoft Sentinel or Defender XDR Advanced Hunting.">
+        Indikator einfügen → Huntbook wählen → fertige KQL kopieren. Ocular füllt alle Platzhalter automatisch mit deinem IOC-Kontext — ready für Microsoft Sentinel oder Defender XDR Advanced Hunting.
       </p>
     </div>
 
